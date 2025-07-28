@@ -1,48 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md. Arif Babu Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a clean typeface -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your external CSS file for custom styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <img src="1708325051902.jpg" alt="Md. Arif Babu">
-    <h1>Md. Arif Babu</h1>
-    <h2>Student of CSE at Sonargaon University</h2>
-    <p>From Dinajpur, Living in Dhaka</p>
-  </header>
+<body class="antialiased">
 
-  <div class="container">
-    <section>
-      <h3>About Me</h3>
-      <p>I am a 3rd-year student of Computer Science and Engineering at Sonargaon University. I'm passionate about web development, data entry, and tech tools. I always love learning and growing in the digital world.</p>
-    </section>
+    <div class="container max-w-4xl mx-auto p-6 space-y-8">
 
-    <section>
-      <h3>Skills</h3>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>SQL</li>
-        <li>Data Entry</li>
-        <li>MS Office</li>
-      </ul>
-    </section>
+        <!-- Navigation Bar: Links to different sections of the page -->
+        <nav class="glass-effect p-4 rounded-xl flex justify-center items-center gap-6 md:gap-10">
+            <a href="#hero" class="text-lg font-medium hover:text-red-400 transition-colors duration-300 rounded-lg p-2">Home</a>
+            <a href="#about" class="text-lg font-medium hover:text-red-400 transition-colors duration-300 rounded-lg p-2">About</a>
+            <a href="#skills" class="text-lg font-medium hover:text-red-400 transition-colors duration-300 rounded-lg p-2">Skills</a>
+            <a href="#portfolio" class="text-lg font-medium hover:text-red-400 transition-colors duration-300 rounded-lg p-2">Portfolio</a>
+            <a href="#contact" class="text-lg font-medium hover:text-red-400 transition-colors duration-300 rounded-lg p-2">Contact</a>
+        </nav>
 
-    <section>
-      <h3>Languages</h3>
-      <ul>
-        <li>Bangla</li>
-        <li>English</li>
-        <li>Hindi</li>
-        <li>Arabic</li>
-      </ul>
-    </section>
-  </div>
+        <!-- Hero Section: Introduction and call to action -->
+        <section id="hero" class="glass-effect p-8 rounded-xl text-center md:text-left flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
+            <div class="flex-shrink-0">
+                <!-- Placeholder for your profile picture -->
+                <img src="https://placehold.co/150x150/000000/FF0000?text=PROFILE" alt="Profile Picture" class="rounded-full border-4 border-red-600 shadow-lg">
+            </div>
+            <div class="md:flex-grow">
+                <h1 class="text-5xl font-bold mb-4 text-red-500">Hi, I'm Arif</h1>
+                <p class="text-2xl text-gray-300 mb-6">A passionate <span class="text-red-400 font-semibold">[Data Analyst]</span></p>
+                <p class="text-lg text-black leading-relaxed">
+                    Welcome to my digital space! I specialize in creating innovative and impactful solutions. Explore my work and let's connect.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                    <a href="#portfolio" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">View My Work</a>
+                    <a href="#contact" class="border border-red-600 text-red-400 hover:bg-red-600 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Get In Touch</a>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    &copy; 2025 Md. Arif Babu. All Rights Reserved.
-  </footer>
+        <!-- About Me Section: Detailed information about yourself -->
+        <section id="about" class="glass-effect p-8 rounded-xl">
+            <h2 class="text-4xl font-bold text-red-500 mb-6 text-center">About Me</h2>
+            <div class="text-lg text-black leading-relaxed space-y-4">
+                <p>
+                    I'm a [Your Profession/Role] with a strong background in [mention your field, e.g., web development, graphic design, data science]. My journey in [your field] began [X] years ago, driven by a curiosity to [mention your motivation, e.g., build beautiful interfaces, solve complex problems, tell compelling stories].
+                </p>
+                <p>
+                    I thrive on challenges and constantly seek to learn new technologies and techniques. My approach combines creativity with a meticulous attention to detail, ensuring that every project I undertake is not only functional but also aesthetically pleasing and user-friendly.
+                </p>
+                <p>
+                    Outside of my professional life, I enjoy [mention hobbies, e.g., hiking, reading sci-fi, playing guitar]. These activities help me stay refreshed and bring a unique perspective to my work.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section: Showcase your technical abilities -->
+        <section id="skills" class="glass-effect p-8 rounded-xl">
+            <h2 class="text-4xl font-bold text-red-500 mb-6 text-center">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Category 1 -->
+                <div class="bg-black bg-opacity-30 p-6 rounded-xl shadow-inner border border-red-700">
+                    <h3 class="text-2xl font-semibold text-red-400 mb-4">Frontend Development</h3>
+                    <ul class="list-disc list-inside space-y-2 text-white">
+                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>React, Vue.js, Angular</li>
+                        <li>Tailwind CSS, Bootstrap</li>
+                        <li>Responsive Design, UI/UX Principles</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 2 -->
+                <div class="bg-black bg-opacity-30 p-6 rounded-xl shadow-inner border border-red-700">
+                    <h3 class="text-2xl font-semibold text-red-400 mb-4">Backend Development</h3>
+                    <ul class="list-disc list-inside space-y-2 text-white">
+                        <li>Node.js, Python (Django/Flask)</li>
+                        <li>RESTful APIs, GraphQL</li>
+                        <li>Databases (MongoDB, PostgreSQL, MySQL)</li>
+                        <li>Authentication & Authorization</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 3 -->
+                <div class="bg-black bg-opacity-30 p-6 rounded-xl shadow-inner border border-red-700">
+                    <h3 class="text-2xl font-semibold text-red-400 mb-4">Tools & Others</h3>
+                    <ul class="list-disc list-inside space-y-2 text-white">
+                        <li>Git, GitHub/GitLab</li>
+                        <li>Docker, AWS/Netlify</li>
+                        <li>Figma, Adobe XD</li>
+                        <li>Problem Solving, Agile Methodologies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Projects Section: Showcase your projects -->
+        <section id="portfolio" class="glass-effect p-8 rounded-xl">
+            <h2 class="text-4xl font-bold text-red-500 mb-6 text-center">My Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-black bg-opacity-30 p-6 rounded-xl shadow-lg border border-red-700 transform hover:scale-103 transition-transform duration-300">
+                    <img src="https://placehold.co/400x250/000000/FF0000?text=Project+1" alt="Project 1" class="rounded-lg mb-4 w-full h-auto object-cover">
+                    <h3 class="text-2xl font-semibold text-red-400 mb-2">Project Title One</h3>
+                    <p class="text-gray-400 mb-4">A brief description of Project One, highlighting its key features and technologies used. This project demonstrates my skills in [mention specific skills].</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="text-red-500 hover:text-red-400 font-medium transition-colors duration-300">View Live <span class="ml-1">&#8599;</span></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">GitHub <span class="ml-1">&#8599;</span></a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-black bg-opacity-30 p-6 rounded-xl shadow-lg border border-red-700 transform hover:scale-103 transition-transform duration-300">
+                    <img src="https://placehold.co/400x250/000000/FF0000?text=Project+2" alt="Project 2" class="rounded-lg mb-4 w-full h-auto object-cover">
+                    <h3 class="text-2xl font-semibold text-red-400 mb-2">Project Title Two</h3>
+                    <p class="text-gray-400 mb-4">A brief description of Project Two, highlighting its key features and technologies used. This project demonstrates my skills in [mention specific skills].</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="text-red-500 hover:text-red-400 font-medium transition-colors duration-300">View Live <span class="ml-1">&#8599;</span></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">GitHub <span class="ml-1">&#8599;</span></a>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section: How visitors can reach you -->
+        <section id="contact" class="glass-effect p-8 rounded-xl text-center">
+            <h2 class="text-4xl font-bold text-red-500 mb-6">Get In Touch</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                Have a project in mind or just want to say hello? Feel free to reach out!
+            </p>
+            <form class="max-w-md mx-auto space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-black bg-opacity-20 border border-red-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500">
+                <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-black bg-opacity-20 border border-red-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500">
+                <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg bg-black bg-opacity-20 border border-red-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Send Message</button>
+            </form>
+            <div class="mt-8 text-gray-400">
+                <p>Email: <a href="mailto:your.email@example.com" class="text-red-400 hover:underline">your.email@example.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-red-400 hover:underline">linkedin.com/in/yourprofile</a></p>
+                <p>GitHub: <a href="https://github.com/yourusername" target="_blank" class="text-red-400 hover:underline">github.com/yourusername</a></p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="glass-effect p-6 rounded-xl text-center text-gray-500 text-sm">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <p class="mt-2">Designed with <span class="text-red-500">&hearts;</span> by [Your Name]</p>
+        </footer>
+
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
